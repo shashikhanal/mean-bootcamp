@@ -6,8 +6,6 @@ var library = [
 	{ author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245 }
 ];
 
-var sorted_array = [];
-
 var compare = function(a,b) {
   if (a.title < b.title)
     return -1;
