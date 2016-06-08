@@ -24,7 +24,7 @@ var findSmallSpread = function(){
 
 		for (var i = 1; i < line.length; i++){
 			var value = line[i].split(',');
-			spread = value[1] - value[2];
+			spread = Math.abs(value[1] - value[2]);
 
 			if (i === 1) smallestSpread = spread;
 
