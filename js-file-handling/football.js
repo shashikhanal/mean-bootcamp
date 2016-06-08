@@ -25,7 +25,7 @@ var smallDiff = function(){
 
 		for (var i = 1; i < line.length; i++){
 			var value = line[i].split(',');
-			var diff = value[5] - value[6];
+			var diff = Math.abs(value[5] - value[6]);
 
 			if ( i === 1) smallestDifference = diff;
 
