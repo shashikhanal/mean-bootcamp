@@ -19,7 +19,6 @@ var celebrityId = (function(){
 			id = attr;
 		}
 	}
-	return get();
 })();
 
 console.log(celebrityId.get());
