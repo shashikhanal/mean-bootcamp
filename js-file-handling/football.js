@@ -6,7 +6,7 @@
 
 // Write a program to read the file, then print the name of the team with the smallest difference 
 // in ‘for’ and ‘against’ goals.
-// Arsenal,38,26,9,3,79,36,87
+
 var fs = require('fs');
 
 var smallDiff = function(){
