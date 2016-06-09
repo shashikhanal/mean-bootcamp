@@ -55,24 +55,32 @@ var getColumn = function(arr, j){
 var findSaddle = function(arr){
 	var saddlePoints = [];
 	var minInRow = 0, columnArray = [], maxInColumn = 0;
+	var indexOfMin = 0, indexOfMax = 0;
 
 	for (var i = 0; i < arr.length; i++){
 		minInRow = Math.min.apply(Math, arr[i]);
+		indexOfMin = arr[i].indexOf(minInRow);
 		//ok
 		for (var j = 0; j < arr[i].length; j++){
-			if (arr[i][j] >= minInRow){
+			if ( (arr[i][j] > minInRow) || (arr[i][j] === minInRow && arr[i].indexOf(arr[i][j]) != indexOfMin) ){
 				columnArray = getColumn(arr, j);
 				maxInColumn = Math.max.apply(Math, columnArray);
-				// ok in maxInColumn
+				indexOfMax = columnArray.indexOf(maxInColumn);
 
-				if (arr[i][j] <= maxInColumn){
+				if ( (arr[i][j] < maxInColumn) || (arr[i][j] === maxInColumn && columnArray.indexOf(arr[i][j]) != indexOfMax) ){
 					saddlePoints.push([i,j]);
 				}
 			}
 		}
 	}
-	return saddlePoints;
+	if (saddlePoints.length === 0){
+		return "No saddle points !"
+	} else {
+		return saddlePoints;
+	}
 }
 
+console.log("Generated array:");
 console.log(generateArray(array));
+console.log("Saddle points:");
 console.log(findSaddle(array));
