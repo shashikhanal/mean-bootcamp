@@ -71,9 +71,8 @@ var findSaddle = function(arr){
 			}
 		}
 	}
-	console.log(saddlePoints);
 	return saddlePoints;
 }
 
 console.log(generateArray(array));
-findSaddle(array);
+console.log(findSaddle(array));
