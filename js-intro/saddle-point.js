@@ -39,8 +39,8 @@ var generateArray = function(arr){
 	array = arrayMd;
 	return arrayMd;
 }
-///////
 
+// gets column for the row's element
 var getColumn = function(arr, j){
 	var col = [];
 
@@ -51,7 +51,7 @@ var getColumn = function(arr, j){
 }
 
 
-// find saddle points
+// finds saddle points
 var findSaddle = function(arr){
 	var saddlePoints = [];
 	var minInRow = 0, columnArray = [], maxInColumn = 0;
