@@ -35,9 +35,6 @@ var findSmallSpread = function(){
 		}
 		console.log(day);
 	});
-	//return day;
-	return;
 }
 
-//console.log(findSmallSpread());
 findSmallSpread();
