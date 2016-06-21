@@ -11,17 +11,8 @@ var convert = function(){
 	}
 	file.end();
 
-	// for (var i = 0; i < data1.length; i++){
-	// 	fs.writeFile(file2, { data1(i).fname, data1(i).lname, data1(i).dob }, function(err){
-	// 		if (err) return console.error(err);
-
-	// 		console.log("File written successfully !");
-	// 	});
-	// }
+	
 	return;
 }
 
 convert();
-
-
-// { data1(i).fname, data1(i).lname, data1(i).dob }
